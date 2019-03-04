@@ -2,6 +2,7 @@ import { combineReducers } from 'redux'
 import authedUser from './authedUser'
 import users from './users'
 import tweets from './tweets'
+import { loadingBarReducer } from 'react-redux-loading'
 
 /* 
 Inicializamos cada fatia do armazenador ao configurar um valor de
@@ -12,5 +13,6 @@ estado (state) padrão como o primeiro parâmetro de cada função redutora /red
 export default combineReducers ({
     authedUser,
     users,
-    tweets
+    tweets,
+    loadingBar: loadingBarReducer,
 }) 
